@@ -59,8 +59,9 @@ $ns attach-agent $n6 $rcvr2
 $ns at 3.0 "$n6 join-group $rcvr5 $group2"
 set rcvr6 [new Agent/Null]
 $ns attach-agent $n7 $rcvr3
-#The nodes are leaving the group at specified times
 $ns at 3.5 "$n7 join-group $rcvr6 $group2"
+
+#The nodes are leaving the group at specified times
 $ns at 4.0 "$n5 leave-group $rcvr1 $group1"
 $ns at 4.5 "$n6 leave-group $rcvr2 $group1"
 $ns at 5.0 "$n7 leave-group $rcvr3 $group1"
